@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         TextView texto = new TextView(this);
         texto.setText("Hello, Android");
         setContentView(texto);
+        setContentView(texto);
     }
 
 
