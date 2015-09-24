@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Aplicacion7</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="name">Nombre</string>
+    <string name="comment">Comentarios</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancelar</string>
+</resources>

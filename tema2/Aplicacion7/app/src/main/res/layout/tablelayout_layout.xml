@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1" >
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/label_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/comment" />
+
+        <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textMultiLine"
+            android:minLines="5" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+    </TableRow>
+
+</TableLayout>
