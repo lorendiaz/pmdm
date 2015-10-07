@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Aplicacion17</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_clear">Limpiar lista</string>
+</resources>
