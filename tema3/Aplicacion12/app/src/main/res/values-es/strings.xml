@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aplicacion9</string>
+
+    <string name="game">Videojuego</string>
+    <string name="start">Iniciar juego</string>
+    <string name="settings">Configurar juego</string>
+    <string name="ranking">Ver Ranking</string>
+    <string name="about">Acerca de</string>
+    <string name="exit">Salir</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

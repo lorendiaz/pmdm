@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="activity_horizontal_margin">150dp</dimen>
+    <dimen name="titulo">45sp</dimen>
+    <dimen name="boton">30sp</dimen>
+</resources>
+
+
