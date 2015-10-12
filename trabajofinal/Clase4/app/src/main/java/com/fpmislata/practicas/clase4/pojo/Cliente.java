@@ -1,12 +1,11 @@
-package mibancooperacional.pojo;
+package com.fpmislata.practicas.clase4.pojo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by loren on 07/10/15.
  */
-public class Cliente implements Serializable{
+public class Cliente {
 
     private int id;
     private String nif;
@@ -88,6 +87,6 @@ public class Cliente implements Serializable{
 
     @Override
     public String toString(){
-        return "id: " + this.id + "\nnif: " + this.nif + "\nnombre: " + this.nombre + "\napellidos: " + this.apellidos;
+        return this.nif + ";" + this.nombre + ";" + this.apellidos;
     }
 }

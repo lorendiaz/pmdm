@@ -1,13 +1,11 @@
-package mibancooperacional.pojo;
+package com.fpmislata.practicas.clase4.pojo;
 
-import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by loren on 07/10/15.
  */
-public class Movimiento implements Serializable {
+public class Movimiento {
 
     private int id;
     private int tipo;
@@ -81,16 +79,5 @@ public class Movimiento implements Serializable {
         this.importe = importe;
         this.cuentaOrigen = cuentaOrigen;
         this.cuentaDestino = cuentaDestino;
-    }
-
-    public Movimiento(){
-        super();
-    }
-
-    @Override
-    public String toString(){
-        SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
-        return "id: " + this.id + "\ntipo: " + this.tipo + "\nfecha operacion: " + formateador.format(this.fechaOperacion) + "\ndescripcion: " + this.descripcion + "\nimporte: " +
-                this.importe + "\nid cuenta origen: " + this.cuentaOrigen.getId() + "\nid cuenta destino: " + this.cuentaDestino.getId();
     }
 }

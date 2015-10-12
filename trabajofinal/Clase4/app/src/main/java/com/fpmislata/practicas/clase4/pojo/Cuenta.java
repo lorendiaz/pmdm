@@ -1,12 +1,11 @@
-package mibancooperacional.pojo;
+package com.fpmislata.practicas.clase4.pojo;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by loren on 07/10/15.
  */
-public class Cuenta implements Serializable {
+public class Cuenta {
 
     private int id;
     private String banco;
@@ -94,11 +93,5 @@ public class Cuenta implements Serializable {
 
     public void setSaldoActual(float saldoActual) {
         this.saldoActual = saldoActual;
-    }
-
-    @Override
-    public String toString(){
-        return "id: " + this.id + "\nbanco: " + this.banco + "\nsucursal: " + this.sucursal + "\ndc: " + this.dc + "\nnumero cuenta: " +
-                this.numeroCuenta + "\nid cliente: " + this.cliente.getId() + "\nsaldo actual: " + this.saldoActual;
     }
 }
