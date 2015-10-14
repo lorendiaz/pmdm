@@ -38,7 +38,9 @@ public class MiBancoOperacional {
     // que solo contendrá el nif y la password.
     public Cliente login(Cliente c){
         Cliente aux = (Cliente) miBD.getClienteDAO().search(c);
-        if (aux.getClaveSeguridad().equals(c.getClaveSeguridad())){
+        if(aux==null){
+            return null;
+        }else if (aux.getClaveSeguridad().equals(c.getClaveSeguridad())){
             return aux;
         }else{
             return null;
