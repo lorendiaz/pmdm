@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/loren/Documents/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-96d63a7e23d3d86f0ed11751db58b4085703c980.jar" />
+    </item>
+    <item
+        jar="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-feb1430c7e1c432c5e31c4e21c3fc6631a139868.jar" />
+    </item>
+    <item
+        jar="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/pre-dexed/debug/classes-966b967294d7cf4d01b1870333c27a47dc163ab1.jar" />
+    </item>
+    <item
+        jar="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/loren/subidapracticas/tema5/Aplicacion22/app/build/intermediates/pre-dexed/debug/classes-75ea42ddce4100c43cca26d68c9eaadd1942dc79.jar" />
+    </item>
+
+</items>
