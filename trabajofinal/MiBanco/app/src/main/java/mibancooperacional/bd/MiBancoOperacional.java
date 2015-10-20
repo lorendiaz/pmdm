@@ -66,4 +66,15 @@ public class MiBancoOperacional {
     public ArrayList<Movimiento> getMovimientos(Cuenta c){
         return miBD.getMovimientoDAO().getMovimientos(c);
     }
+
+    // Operacion transferencia: Desde una cuenta hace transferencia a otra cuenta, siempre que en la cuenta origen haya dinero disponible.
+    // No se permitirá realizar una transferencia si la cuenta se queda en negativo.
+    // Si se permite la operacion devolvera un 0, si no se permite la operacion devolvera un 1.
+    // Solo se permiten movimiento en las cuentas locales al banco, por lo que ambas cuentas deben existir.
+    // La operación se ha de ver reflejada en las dos cuentas: el descuento en una y el ingreso en otra.
+    // El campo tipo en la tabla de movimientos indica como es el movimiento. 0 indica que es un descuento, 1 indica que es un ingreso
+    // y 2 indica que es un reintegro por un cajero.
+    public int transferencia(Cuenta cuentaOrigen, Cuenta cuentaDestino, float importe){
+
+    }
 }

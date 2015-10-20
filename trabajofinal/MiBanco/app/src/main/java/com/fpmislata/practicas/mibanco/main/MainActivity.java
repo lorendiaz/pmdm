@@ -2,6 +2,7 @@ package com.fpmislata.practicas.mibanco.main;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.fpmislata.practicas.mibanco.R;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtdatos=(TextView)findViewById(R.id.textView1);
 
         // Introducimos los datos como si fuera la pantalla inicial
+        Log.e(this.getComponentName().getClassName(),"Creando el cliente a");
         Cliente a = new Cliente();
         a.setNif("11111111A");
         a.setClaveSeguridad("1234");
