@@ -67,14 +67,21 @@ public class MiBancoOperacional {
         return miBD.getMovimientoDAO().getMovimientos(c);
     }
 
-    // Operacion transferencia: Desde una cuenta hace transferencia a otra cuenta, siempre que en la cuenta origen haya dinero disponible.
-    // No se permitirá realizar una transferencia si la cuenta se queda en negativo.
-    // Si se permite la operacion devolvera un 0, si no se permite la operacion devolvera un 1.
-    // Solo se permiten movimiento en las cuentas locales al banco, por lo que ambas cuentas deben existir.
-    // La operación se ha de ver reflejada en las dos cuentas: el descuento en una y el ingreso en otra.
-    // El campo tipo en la tabla de movimientos indica como es el movimiento. 0 indica que es un descuento, 1 indica que es un ingreso
-    // y 2 indica que es un reintegro por un cajero.
-    public int transferencia(Cuenta cuentaOrigen, Cuenta cuentaDestino, float importe){
+    /* Operacion transferencia: Desde una cuenta hace transferencia a otra cuenta, siempre que en la cuenta origen haya dinero disponible.
+
+       Restricciones:
+
+         - La comprobacion de la existencia de la cuenta destino se realizará dentro del método. La cuenta de origen existe por defecto, ya que el alumno ha de poder seleccionarla.
+         - En caso de no existir la cuenta destino se devolvera como entero un 1.
+         - La fecha de la operación será la fecha del sistema. Recordar que es almacenada como un long.
+         - No se permitirá realizar una transferencia si la cuenta se queda en negativo. En este caso se devolvera como entero un 2.
+         - Solo se permiten movimiento en las cuentas locales al banco, por lo que ambas cuentas deben existir.
+         - La operación se ha de ver reflejada en las dos cuentas: el descuento en una y el ingreso en otra.
+         - El campo tipo en la tabla de movimientos indica como es el movimiento. 0 indica que es un descuento, 1 indica que es un ingreso y 2 indica que es un reintegro por un cajero.
+         - El movimiento que viene como parametro en el metodo, que viene en la variable movimientoTransferencia ha de ser de tipo 0.
+         - Si la operacion es correcta se devuelve un 0
+    */
+    public int transferencia(Movimiento movimientoTransferencia){
 
     }
 }
