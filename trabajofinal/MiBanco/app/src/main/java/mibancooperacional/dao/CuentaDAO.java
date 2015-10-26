@@ -2,6 +2,7 @@ package mibancooperacional.dao;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 
@@ -22,8 +23,9 @@ public class CuentaDAO implements PojoDAO{
         contentValues.put("banco" , c.getBanco());
         contentValues.put("sucursal", c.getSucursal());
         contentValues.put("dc", c.getDc());
-        contentValues.put("numeroCuenta", c.getNumeroCuenta());
+        contentValues.put("numerocuenta", c.getNumeroCuenta());
         contentValues.put("idcliente", c.getCliente().getId());
+        contentValues.put("saldoactual",c.getSaldoActual());
         return MiBD.getDB().insert("cuentas", null, contentValues);
     }
 
@@ -34,7 +36,8 @@ public class CuentaDAO implements PojoDAO{
         contentValues.put("banco" , c.getBanco());
         contentValues.put("sucursal", c.getSucursal());
         contentValues.put("dc", c.getDc());
-        contentValues.put("numeroCuenta", c.getNumeroCuenta());
+        contentValues.put("numerocuenta", c.getNumeroCuenta());
+        contentValues.put("saldoactual",c.getSaldoActual());
         contentValues.put("idcliente", c.getCliente().getId());
 
         String condicion = "id=" + String.valueOf(c.getId());
@@ -54,7 +57,13 @@ public class CuentaDAO implements PojoDAO{
     @Override
     public Object search(Object obj) {
         Cuenta c = (Cuenta) obj;
-        String condicion = "id=" + String.valueOf(c.getId());
+        String condicion = "";
+        if(TextUtils.isEmpty(c.getBanco())){
+            condicion = "id=" + String.valueOf(c.getId());
+        }else{
+            condicion = "banco=" + String.valueOf(c.getBanco())  + " AND sucursal = " + String.valueOf(c.getSucursal()) +
+                    " AND dc = " + String.valueOf(c.getDc()) + " AND numerocuenta = " + String.valueOf(c.getNumeroCuenta());
+        }
         String[] columnas = {
                 "id","banco","sucursal","dc","numerocuenta","saldoactual", "idcliente"
         };
