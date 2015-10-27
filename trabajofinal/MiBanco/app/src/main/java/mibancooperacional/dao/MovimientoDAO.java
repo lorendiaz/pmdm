@@ -3,7 +3,6 @@ package mibancooperacional.dao;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -18,11 +17,10 @@ public class MovimientoDAO implements PojoDAO {
 
     @Override
     public long add(Object obj) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         ContentValues contentValues = new ContentValues();
         Movimiento c = (Movimiento) obj;
         contentValues.put("tipo", c.getTipo());
-        contentValues.put("fechaOperaciones", dateFormat.format(c.getFechaOperacion()));
+        contentValues.put("fechaOperaciones", c.getFechaOperacion().getTime());
         contentValues.put("descripcion", c.getDescripcion());
         contentValues.put("importe", c.getImporte());
         contentValues.put("idcuentaorigen", c.getCuentaOrigen().getId());
@@ -33,7 +31,6 @@ public class MovimientoDAO implements PojoDAO {
 
     @Override
     public int update(Object obj) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         ContentValues contentValues = new ContentValues();
         Movimiento c = (Movimiento) obj;
         contentValues.put("tipo", c.getTipo());
@@ -68,7 +65,7 @@ public class MovimientoDAO implements PojoDAO {
         if (cursor.moveToFirst()) {
             c.setId(cursor.getInt(0));
             c.setTipo(cursor.getInt(1));
-            c.setFechaOperacion(new Date(cursor.getLong(2) * 1000));
+            c.setFechaOperacion(new Date(cursor.getLong(2)));
             c.setDescripcion(cursor.getString(3));
             c.setImporte(cursor.getFloat(4));
 
@@ -105,7 +102,7 @@ public class MovimientoDAO implements PojoDAO {
                 Movimiento c = new Movimiento();
                 c.setId(cursor.getInt(0));
                 c.setTipo(cursor.getInt(1));
-                c.setFechaOperacion(new Date(cursor.getLong(2) * 1000));
+                c.setFechaOperacion(new Date(cursor.getLong(2)));
                 c.setDescripcion(cursor.getString(3));
                 c.setImporte(cursor.getFloat(4));
 
