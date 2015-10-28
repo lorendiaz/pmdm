@@ -20,7 +20,7 @@ public class MovimientoDAO implements PojoDAO {
         ContentValues contentValues = new ContentValues();
         Movimiento c = (Movimiento) obj;
         contentValues.put("tipo", c.getTipo());
-        contentValues.put("fechaOperaciones", c.getFechaOperacion().getTime());
+        contentValues.put("fechaoperacion", c.getFechaOperacion().getTime());
         contentValues.put("descripcion", c.getDescripcion());
         contentValues.put("importe", c.getImporte());
         contentValues.put("idcuentaorigen", c.getCuentaOrigen().getId());
@@ -34,7 +34,7 @@ public class MovimientoDAO implements PojoDAO {
         ContentValues contentValues = new ContentValues();
         Movimiento c = (Movimiento) obj;
         contentValues.put("tipo", c.getTipo());
-        contentValues.put("fechaOperaciones", c.getFechaOperacion().getTime());
+        contentValues.put("fechaoperacion", c.getFechaOperacion().getTime());
         contentValues.put("descripcion", c.getDescripcion());
         contentValues.put("importe", c.getImporte());
         contentValues.put("idcuentaorigen", c.getCuentaOrigen().getId());
