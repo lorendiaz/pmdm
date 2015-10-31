@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplicacion26</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_buscar">Search</string>
+    <string name="action_nuevo">Add</string>
+    <string name="Título">Titulo largo appbar</string>
+    <string name="Subtítulo">Subtítulo appbar </string>
+</resources>
