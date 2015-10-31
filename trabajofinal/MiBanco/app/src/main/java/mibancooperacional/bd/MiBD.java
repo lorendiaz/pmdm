@@ -18,7 +18,7 @@ public class MiBD extends SQLiteOpenHelper {
     //nombre de la base de datos
     private static final String database = "MiBanco";
     //versión de la base de datos
-    private static final int version = 9;
+    private static final int version = 10;
     //Instrucción SQL para crear la tabla de Clientes
     private String sqlCreacionClientes = "CREATE TABLE clientes ( id INTEGER PRIMARY KEY AUTOINCREMENT, nif STRING, nombre STRING, " +
             "apellidos STRING, claveSeguridad STRING, email STRING);";
@@ -142,7 +142,7 @@ public class MiBD extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 0, 1420153380000, 'Recibo Iberdrola Diciembre 2014', -96.36, 3, 5);");
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 0, 1420153380000, 'Recibo Iberdrola Diciembre 2014', -84.84, 4, 5);");
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 0, 1420326180000, 'Recibo Gas Natural Diciembre 2014', -340.39, 1, 6);");
-        db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 1, 1420326180000, 'Devolución Telefónica Diciembre 2014', 30.76, 7, 1);");
+        db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 1, 1420326180000, 'Devolución Telefónica Diciembre 2014', 30.76, 19, 1);");
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 0, 1420412580000, 'Recibo BMW Diciembre 2014', -256.65, 1, 10);");
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 2, 1420498980000, 'Reintegro cajero', -70, 1, -1);");
         db.execSQL("INSERT INTO movimientos (rowid, id, tipo, fechaoperacion, descripcion, importe, idcuentaorigen, idcuentadestino) VALUES (null, null, 1, 1420498980000, 'Ingreso Nómina Ayuntamiento Valencia Diciembre 2014', 2150.50, 19, 1);");

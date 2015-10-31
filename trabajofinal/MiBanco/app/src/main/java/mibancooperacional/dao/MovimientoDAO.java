@@ -170,4 +170,44 @@ public class MovimientoDAO implements PojoDAO {
         }
         return listaMovimientos;
     }
+
+    public ArrayList getMovimientosTipo(Cuenta cuenta, int tipo) {
+        ArrayList<Movimiento> listaMovimientos = new ArrayList<Movimiento>();
+        String condicion = "idcuentaorigen=" + String.valueOf(cuenta.getId()) + " AND tipo = " + String.valueOf(tipo);
+        String[] columnas = {
+                "id","tipo","fechaoperacion","descripcion","importe","idcuentaorigen", "idcuentadestino"
+        };
+        Cursor cursor = MiBD.getDB().query("movimientos", columnas, condicion, null, null, null, null);
+        if (cursor.moveToFirst()) {
+            //Recorremos el cursor hasta que no haya más registros
+            do {
+                Movimiento c = new Movimiento();
+                c.setId(cursor.getInt(0));
+                c.setTipo(cursor.getInt(1));
+                c.setFechaOperacion(new Date(cursor.getLong(2)));
+                c.setDescripcion(cursor.getString(3));
+                c.setImporte(cursor.getFloat(4));
+
+                // Asignamos la cuenta de origen
+                c.setCuentaOrigen(cuenta);
+
+
+                // Asignamos la cuenta de destino
+                Cuenta a = new Cuenta();
+                int aux = cursor.getInt(6);
+                if (aux == -1) {
+                    a.setId(-1);
+                    c.setCuentaDestino(a);
+                }else {
+                    a.setId(aux);
+                    a = (Cuenta) MiBD.getInstance(null).getCuentaDAO().search(a);
+                    c.setCuentaDestino(a);
+                }
+
+                listaMovimientos.add(c);
+
+            } while(cursor.moveToNext());
+        }
+        return listaMovimientos;
+    }
 }

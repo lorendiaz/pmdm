@@ -111,6 +111,13 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<listaMovimientos.size();i++){
             txtdatos.append("\n" + listaMovimientos.get(i).toString() + "\n");
         }
+        txtdatos.append("Probamos una cuenta que no exista.\n");
+        txtdatos.append("----------------------------------------------------------------------------------------------------\n");
+
+        Cuenta cuenta  =listaCuentas.get(0);
+        cuenta.setId(11111);
+        cuenta.setBanco(null);
+        cuenta = (Cuenta)MiBD.getInstance(this).getCuentaDAO().search((Cuenta)cuenta);
 
     }
 
