@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aplicacion35</string>
+    <string name="progreso">Progreso:</string>
+    <string name="btn_ejecutar">Ejecutar</string>
+</resources>
