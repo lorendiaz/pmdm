@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Categoría 1">
+        <CheckBoxPreference
+            android:key="reproducirMusica"
+            android:title="Música"
+            android:summary="Escuchar la música mientras se ejecuta la aplicación" />
+
+        <EditTextPreference
+            android:key="nick"
+            android:title="Nick por defecto"
+            android:summary="Introduzca su nick por defecto"
+            android:dialogTitle="Nick por defecto" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Categoría 2">
+        <ListPreference
+            android:key="pais"
+            android:title="Pais de residencia"
+            android:summary="¿Donde vivo?"
+            android:dialogTitle="Indicar Pais donde vives"
+            android:entries="@array/pais"
+            android:entryValues="@array/codigopais" />
+
+        <MultiSelectListPreference
+            android:key="paisesVisitados"
+            android:title="Paises visitados"
+            android:summary="Lista de paises visitados"
+            android:dialogTitle="Indicar Paises que se ha visitado"
+            android:entries="@array/pais"
+            android:entryValues="@array/codigopais" />
+    </PreferenceCategory>
+</PreferenceScreen>
