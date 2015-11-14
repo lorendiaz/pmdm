@@ -96,6 +96,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    Resultado r = tarea.get();
+    
 }
