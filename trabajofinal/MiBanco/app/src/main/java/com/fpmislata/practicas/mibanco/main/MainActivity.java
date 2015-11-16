@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txtdatos=(TextView)findViewById(R.id.textView1);
 
         // Introducimos los datos como si fuera la pantalla inicial
-        Log.e(this.getComponentName().getClassName(),"Creando el cliente a");
+        Log.e(this.getComponentName().getClassName(), "Creando el cliente a");
         Cliente a = new Cliente();
         a.setNif("11111111A");
         a.setClaveSeguridad("1234");
@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
         txtdatos.append("-----------------------------------------\n");
         txtdatos.append("\n");
         a.setClaveSeguridad("12345");
-        mbo.changePassword(a);
+        int p = mbo.changePassword(a);
+        txtdatos.append("Hemos obtenido tras cambiar un " + String.valueOf(p));
+        txtdatos.append("\n");
         txtdatos.append("Password cambiada a 12345.\n");
         txtdatos.append("\n");
 

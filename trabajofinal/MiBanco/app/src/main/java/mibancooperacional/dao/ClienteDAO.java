@@ -39,7 +39,9 @@ public class ClienteDAO implements PojoDAO{
 
         String condicion = "id=" + String.valueOf(c.getId());
 
-        return MiBD.getDB().update("clientes", contentValues, condicion, null);
+        int resultado = MiBD.getDB().update("clientes", contentValues, condicion, null);
+
+        return resultado;
     }
 
     @Override

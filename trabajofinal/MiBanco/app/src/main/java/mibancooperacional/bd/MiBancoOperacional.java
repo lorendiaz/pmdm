@@ -48,11 +48,14 @@ public class MiBancoOperacional {
     }
 
     // Operacion changePassword: Cambia la password del cliente. Recibirá el cliente de la aplicación con la password cambiada.
+    // Si devuelve un 1 es que ha verificado el cambio de password como correcto y todo ha ido bien, mientras que si devuelve
+    // mientras que si devuelve un 0 no ha verificado el cambio de password como correcto y ha habido un error al cambiarlo.
     public int changePassword(Cliente c){
-        if (miBD.getClienteDAO().update(c)==-1){
-            return -1;
-        }else{
+        int resultado = miBD.getClienteDAO().update(c);
+        if (resultado==0) {
             return 0;
+        } else {
+            return 1;
         }
 
     }
