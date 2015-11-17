@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/pre-dexed/debug/classes-d31ede5799f3b8c59640f83257195f7de0d52d15.jar" />
+    </item>
+    <item
+        jar="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-7f88626850b35ff26a4512f31769282d57aa96c9.jar" />
+    </item>
+    <item
+        jar="/Users/loren/Documents/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-75cb152df1b12590fd5c60e50f4cbc2ba7912d9d.jar" />
+    </item>
+    <item
+        jar="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/loren/subidapracticas/tema8/LoginAsyncTask/app/build/intermediates/pre-dexed/debug/classes-e83727900d313f9c83b375f8956b23610043953b.jar" />
+    </item>
+
+</items>
