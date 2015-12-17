@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Aplicacion38</string>
+    <string name="lista_vacia">Sin Datos</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_hipoteca_formulario">Hipoteca Formulario</string>
+    <string name="menu_preferencias">Configuración</string>
+    <string name="menu_crear">Nuevo</string>
+    <string name="menu_editar">Editar</string>
+    <string name="menu_guardar">Guardar</string>
+    <string name="menu_cancelar">Cancelar</string>
+    <string name="menu_eliminar">Eliminar</string>
+    <string name="menu_visualizar">Ver</string>
+    <string name="label_nombre_hipoteca">Nombre:</string>
+    <string name="label_condiciones">Condiciones:</string>
+    <string name="label_contacto">Contacto:</string>
+    <string name="label_telefono">Teléfono:</string>
+    <string name="label_email">E-Mail:</string>
+    <string name="label_observaciones">Observaciones:</string>
+    <string name="label_pasivo">Pasivo</string>
+    <string name="label_situacion">Situación</string>
+
+    <string name="boton_guardar">Guardar</string>
+    <string name="boton_cancelar">Cancelar</string>
+
+    <string name="hipoteca_crear_titulo">Nueva Hipoteca</string>
+    <string name="hipoteca_crear_confirmacion">Hipoteca creada</string>
+    <string name="hipoteca_editar_titulo">Editar Hipoteca</string>
+    <string name="hipoteca_editar_confirmacion">Hipoteca modificada</string>
+    <string name="hipoteca_eliminar_titulo">Eliminar Hipoteca</string>
+    <string name="hipoteca_eliminar_mensaje">¿Seguro que desea eliminar la Hipoteca?</string>
+    <string name="hipoteca_eliminar_confirmacion">Hipoteca eliminada</string>
+</resources>
