@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Aplicacion39</string>
+
+    <string name="etiqueta">
+		reproducción de videos bajo demanda </string>
+
+	<string name="descripcion">Permite a la aplicación reproducir
+		videos de la empresa PayPerView sin tu intervención. Se trata
+		de un servicio no gratuito, por lo que puede afectar al saldo
+		de tu cuenta con esta empresa. Si no tienes una cuenta
+		abierta los videos no podrán ser reproducidos. </string>
+
+</resources>
