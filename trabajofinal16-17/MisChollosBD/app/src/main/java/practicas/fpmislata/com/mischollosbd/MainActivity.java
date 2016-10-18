@@ -106,8 +106,12 @@ public class MainActivity extends AppCompatActivity {
         txtdatos.append("----------------------------------------------------------------------------------------------------\n");
         ArrayList<Alojamiento> listaAlojamientos = api.getListAlojamientosByChollo(listaChollos.get(0));
 
+        txtdatos.append("Se han obtenido " + listaAlojamientos.size() + " alojamientos.\n");
+        txtdatos.append("----------------------------------------------------------------------------------------------------\n");
+
+
         for(int i=0;i<listaAlojamientos.size();i++){
-            txtdatos.append("\n" + listaAlojamientos.get(i) + "\n");
+            txtdatos.append("\n" + listaAlojamientos.get(i).getTituloPrincipal() + "\n");
         }
     }
 }

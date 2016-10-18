@@ -27,6 +27,7 @@ public class AlojamientoDAO implements PojoDAO {
     public static final String C_COLUMNA_ID = "_id";
     public static final String C_COLUMNA_IDCHOLLO   = "idChollo";
     // Informacion resumida
+    public static final String C_COLUMNA_TITULOPRINCIPAL = "tituloPrincipal";
     public static final String C_COLUMNA_PRECIOPERSONA = "precioPersona";
     public static final String C_COLUMNA_INFORMACIONRESUMIDA = "informacionResumida";
     public static final String C_COLUMNA_SIINCLUYE = "siIncluye";
@@ -55,7 +56,7 @@ public class AlojamientoDAO implements PojoDAO {
     /**
      * Definimos lista de columnas de la tabla para utilizarla en las consultas a la base de datos
      */
-    private String[] columnas = new String[]{C_COLUMNA_ID,C_COLUMNA_IDCHOLLO,C_COLUMNA_PRECIOPERSONA,
+    private String[] columnas = new String[]{C_COLUMNA_ID,C_COLUMNA_IDCHOLLO,C_COLUMNA_TITULOPRINCIPAL,C_COLUMNA_PRECIOPERSONA,
             C_COLUMNA_INFORMACIONRESUMIDA,C_COLUMNA_SIINCLUYE,C_COLUMNA_NOINCLUYE,C_COLUMNA_NOTASIMPORTANTES,
             C_COLUMNA_VIAJE,C_COLUMNA_DESCUENTOS,C_COLUMNA_CONDICIONES,C_COLUMNA_LOCALIDAD,C_COLUMNA_DESCRIPCIONGENERAL,
             C_COLUMNA_SERVICIOSALOJAMIENTO,C_COLUMNA_SERVICIOSHABITACION,C_COLUMNA_HORARIOSHABITACION,
@@ -68,6 +69,7 @@ public class AlojamientoDAO implements PojoDAO {
         Alojamiento c = (Alojamiento) obj;
         contentValues.put("idChollo" , c.getChollo().getId());
         // Informacion resumida
+        contentValues.put("tituloPrincipal", c.getTituloPrincipal());
         contentValues.put("precioPersona", c.getPrecioPersona());
         contentValues.put("informacionResumida", c.getInformacionResumida());
         // Informacion
@@ -101,6 +103,7 @@ public class AlojamientoDAO implements PojoDAO {
         Alojamiento c = (Alojamiento) obj;
         contentValues.put("idChollo" , c.getChollo().getId());
         // Informacion resumida
+        contentValues.put("tituloPrincipal", c.getTituloPrincipal());
         contentValues.put("precioPersona", c.getPrecioPersona());
         contentValues.put("informacionResumida", c.getInformacionResumida());
         // Informacion
@@ -159,31 +162,32 @@ public class AlojamientoDAO implements PojoDAO {
             a = (Chollo) MiBD.getInstanceBD().getCholloDAO().search(a);
             c.setChollo(a);
 
-            c.setPrecioPersona(cursor.getFloat(2));
-            c.setInformacionResumida(cursor.getString(3));
-            c.setSiIncluye(cursor.getString(4));
-            c.setNoIncluye(cursor.getString(5));
-            c.setNotasImportantes(cursor.getString(6));
+            c.setTituloPrincipal(cursor.getString(2));
+            c.setPrecioPersona(cursor.getFloat(3));
+            c.setInformacionResumida(cursor.getString(4));
+            c.setSiIncluye(cursor.getString(5));
+            c.setNoIncluye(cursor.getString(6));
+            c.setNotasImportantes(cursor.getString(7));
 
-            c.setViaje(cursor.getString(7));
-            c.setDescuentos(cursor.getString(8));
-            c.setCondiciones(cursor.getString(9));
-            c.setLocalidad(cursor.getString(10));
+            c.setViaje(cursor.getString(8));
+            c.setDescuentos(cursor.getString(9));
+            c.setCondiciones(cursor.getString(10));
+            c.setLocalidad(cursor.getString(11));
 
-            c.setDescripcionGeneral(cursor.getString(11));
-            c.setServiciosAlojamiento(cursor.getString(12));
-            c.setServiciosHabitacion(cursor.getString(13));
-            c.setHorariosHabitacion(cursor.getString(14));
-            c.setNota(cursor.getFloat(15));
+            c.setDescripcionGeneral(cursor.getString(12));
+            c.setServiciosAlojamiento(cursor.getString(13));
+            c.setServiciosHabitacion(cursor.getString(14));
+            c.setHorariosHabitacion(cursor.getString(15));
+            c.setNota(cursor.getFloat(16));
 
-            c.setEstrellas(cursor.getInt(16));
-            c.setNumeroEncuestas(cursor.getInt(17));
-            c.setHabitaciones(cursor.getFloat(18));
-            c.setServicios(cursor.getFloat(19));
-            c.setLimpieza(cursor.getFloat(20));
-            c.setComida(cursor.getFloat(21));
-            c.setPersonal(cursor.getFloat(22));
-            c.setCalidadPrecio(cursor.getFloat(23));
+            c.setEstrellas(cursor.getInt(17));
+            c.setNumeroEncuestas(cursor.getInt(18));
+            c.setHabitaciones(cursor.getFloat(19));
+            c.setServicios(cursor.getFloat(20));
+            c.setLimpieza(cursor.getFloat(21));
+            c.setComida(cursor.getFloat(22));
+            c.setPersonal(cursor.getFloat(23));
+            c.setCalidadPrecio(cursor.getFloat(24));
 
             // Obtenemos la lista de valoraciones
             //c.setListaValoraciones(MiBD.getInstance(null).getValoracionesDAO().getValoraciones(c));
@@ -212,31 +216,32 @@ public class AlojamientoDAO implements PojoDAO {
                 a = (Chollo) MiBD.getInstanceBD().getCholloDAO().search(a);
                 c.setChollo(a);
 
-                c.setPrecioPersona(cursor.getFloat(2));
-                c.setInformacionResumida(cursor.getString(3));
-                c.setSiIncluye(cursor.getString(4));
-                c.setNoIncluye(cursor.getString(5));
-                c.setNotasImportantes(cursor.getString(6));
+                c.setTituloPrincipal(cursor.getString(2));
+                c.setPrecioPersona(cursor.getFloat(3));
+                c.setInformacionResumida(cursor.getString(4));
+                c.setSiIncluye(cursor.getString(5));
+                c.setNoIncluye(cursor.getString(6));
+                c.setNotasImportantes(cursor.getString(7));
 
-                c.setViaje(cursor.getString(7));
-                c.setDescuentos(cursor.getString(8));
-                c.setCondiciones(cursor.getString(9));
-                c.setLocalidad(cursor.getString(10));
+                c.setViaje(cursor.getString(8));
+                c.setDescuentos(cursor.getString(9));
+                c.setCondiciones(cursor.getString(10));
+                c.setLocalidad(cursor.getString(11));
 
-                c.setDescripcionGeneral(cursor.getString(11));
-                c.setServiciosAlojamiento(cursor.getString(12));
-                c.setServiciosHabitacion(cursor.getString(13));
-                c.setHorariosHabitacion(cursor.getString(14));
-                c.setNota(cursor.getFloat(15));
+                c.setDescripcionGeneral(cursor.getString(12));
+                c.setServiciosAlojamiento(cursor.getString(13));
+                c.setServiciosHabitacion(cursor.getString(14));
+                c.setHorariosHabitacion(cursor.getString(15));
+                c.setNota(cursor.getFloat(16));
 
-                c.setEstrellas(cursor.getInt(16));
-                c.setNumeroEncuestas(cursor.getInt(17));
-                c.setHabitaciones(cursor.getFloat(18));
-                c.setServicios(cursor.getFloat(19));
-                c.setLimpieza(cursor.getFloat(20));
-                c.setComida(cursor.getFloat(21));
-                c.setPersonal(cursor.getFloat(22));
-                c.setCalidadPrecio(cursor.getFloat(23));
+                c.setEstrellas(cursor.getInt(17));
+                c.setNumeroEncuestas(cursor.getInt(18));
+                c.setHabitaciones(cursor.getFloat(19));
+                c.setServicios(cursor.getFloat(20));
+                c.setLimpieza(cursor.getFloat(21));
+                c.setComida(cursor.getFloat(22));
+                c.setPersonal(cursor.getFloat(23));
+                c.setCalidadPrecio(cursor.getFloat(24));
 
                 // Obtenemos la lista de valoraciones
                 //c.setListaValoraciones(MiBD.getInstance(null).getValoracionesDAO().getValoraciones(c));
@@ -266,31 +271,32 @@ public class AlojamientoDAO implements PojoDAO {
                 a = (Chollo) MiBD.getInstanceBD().getCholloDAO().search(a);
                 c.setChollo(a);
 
-                c.setPrecioPersona(cursor.getFloat(2));
-                c.setInformacionResumida(cursor.getString(3));
-                c.setSiIncluye(cursor.getString(4));
-                c.setNoIncluye(cursor.getString(5));
-                c.setNotasImportantes(cursor.getString(6));
+                c.setTituloPrincipal(cursor.getString(2));
+                c.setPrecioPersona(cursor.getFloat(3));
+                c.setInformacionResumida(cursor.getString(4));
+                c.setSiIncluye(cursor.getString(5));
+                c.setNoIncluye(cursor.getString(6));
+                c.setNotasImportantes(cursor.getString(7));
 
-                c.setViaje(cursor.getString(7));
-                c.setDescuentos(cursor.getString(8));
-                c.setCondiciones(cursor.getString(9));
-                c.setLocalidad(cursor.getString(10));
+                c.setViaje(cursor.getString(8));
+                c.setDescuentos(cursor.getString(9));
+                c.setCondiciones(cursor.getString(10));
+                c.setLocalidad(cursor.getString(11));
 
-                c.setDescripcionGeneral(cursor.getString(11));
-                c.setServiciosAlojamiento(cursor.getString(12));
-                c.setServiciosHabitacion(cursor.getString(13));
-                c.setHorariosHabitacion(cursor.getString(14));
-                c.setNota(cursor.getFloat(15));
+                c.setDescripcionGeneral(cursor.getString(12));
+                c.setServiciosAlojamiento(cursor.getString(13));
+                c.setServiciosHabitacion(cursor.getString(14));
+                c.setHorariosHabitacion(cursor.getString(15));
+                c.setNota(cursor.getFloat(16));
 
-                c.setEstrellas(cursor.getInt(16));
-                c.setNumeroEncuestas(cursor.getInt(17));
-                c.setHabitaciones(cursor.getFloat(18));
-                c.setServicios(cursor.getFloat(19));
-                c.setLimpieza(cursor.getFloat(20));
-                c.setComida(cursor.getFloat(21));
-                c.setPersonal(cursor.getFloat(22));
-                c.setCalidadPrecio(cursor.getFloat(23));
+                c.setEstrellas(cursor.getInt(17));
+                c.setNumeroEncuestas(cursor.getInt(18));
+                c.setHabitaciones(cursor.getFloat(19));
+                c.setServicios(cursor.getFloat(20));
+                c.setLimpieza(cursor.getFloat(21));
+                c.setComida(cursor.getFloat(22));
+                c.setPersonal(cursor.getFloat(23));
+                c.setCalidadPrecio(cursor.getFloat(24));
 
                 // Obtenemos la lista de valoraciones
                 //c.setListaValoraciones(MiBD.getInstance(null).getValoracionesDAO().getValoraciones(c));

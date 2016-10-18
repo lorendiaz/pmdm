@@ -84,10 +84,12 @@ public class UsuarioDAO implements PojoDAO {
     public Object search(Object obj) {
         Usuario c = (Usuario) obj;
         String condicion = "";
-        if(TextUtils.isEmpty(c.getNif())){
-            condicion = "_id=" + String.valueOf(c.getId());
+        if(!TextUtils.isEmpty(c.getApellidos())){
+            condicion = "apellidos LIKE '%" + String.valueOf(c.getApellidos())  + "%'";
+        }else if(!TextUtils.isEmpty(c.getNif())){
+            condicion = "nif=" + "'" + String.valueOf(c.getNif()) + "'";
         }else{
-            condicion = "nif LIKE '%" + String.valueOf(c.getNif())  + "%'";
+            condicion = "_id=" + String.valueOf(c.getId());
         }
 
         Cursor cursor = MiBD.getDB().query(UsuarioDAO.C_TABLA, columnas, condicion, null, null, null, null);

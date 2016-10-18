@@ -27,14 +27,13 @@ public class MisChollosAPI {
         return instance;
     }
 
-
     // Operacion Login: Verifica que el Usuario existe y que su contraseña es correcta. Recibira un Usuario
     // que solo contendrá el nif y la password.
     public Usuario login(Usuario c){
         Usuario aux = (Usuario) MiBD.getInstanceBD().getUsuarioDAO().search(c);
         if(aux==null){
             return null;
-        }else if (aux.getClaveSeguridad().equals(c.getClaveSeguridad())){
+        }else if (aux.getClaveSeguridad().trim().equals(c.getClaveSeguridad().trim())){
             return aux;
         }else{
             return null;

@@ -13,6 +13,7 @@ public class Alojamiento implements Serializable {
     private int id;
     private Chollo chollo;
     // Informacion resumida
+    private String tituloPrincipal;
     private float precioPersona;
     private String informacionResumida;
     // Informacion
@@ -22,7 +23,6 @@ public class Alojamiento implements Serializable {
     private String viaje;
     private String descuentos;
     private String condiciones;
-    private String tasas;
     private String localidad;
     // Alojamiento
     private String descripcionGeneral;
@@ -47,7 +47,7 @@ public class Alojamiento implements Serializable {
         this.listaValoraciones = new ArrayList<Valoracion>();
     }
 
-    public Alojamiento(int id, Chollo chollo, float precioPersona, String informacionResumida,
+    public Alojamiento(int id, Chollo chollo, String tituloPrincipal, float precioPersona, String informacionResumida,
                        String siIncluye, String noIncluye, String notasImportantes, String viaje,
                        String descuentos, String condiciones, String localidad, String descripcionGeneral,
                        String serviciosAlojamiento, String serviciosHabitacion, String horariosHabitacion,
@@ -56,6 +56,7 @@ public class Alojamiento implements Serializable {
                        float calidadPrecio) {
         this.id = id;
         this.chollo = chollo;
+        this.tituloPrincipal = tituloPrincipal;
         this.precioPersona = precioPersona;
         this.informacionResumida = informacionResumida;
         this.siIncluye = siIncluye;
@@ -279,6 +280,7 @@ public class Alojamiento implements Serializable {
                 "calidadPrecio=" + calidadPrecio +
                 ", id=" + id +
                 ", chollo=" + chollo +
+                ", tituloPrincipal=" + tituloPrincipal +
                 ", precioPersona=" + precioPersona +
                 ", informacionResumida='" + informacionResumida + '\'' +
                 ", siIncluye='" + siIncluye + '\'' +
@@ -319,4 +321,13 @@ public class Alojamiento implements Serializable {
     public void setListaValoraciones(List<Valoracion> listaValoraciones) {
         this.listaValoraciones = listaValoraciones;
     }
+
+    public String getTituloPrincipal() {
+        return tituloPrincipal;
+    }
+
+    public void setTituloPrincipal(String tituloPrincipal) {
+        this.tituloPrincipal = tituloPrincipal;
+    }
+
 }
