@@ -11,6 +11,7 @@ import practicas.fpmislata.com.mischollosbd.api.MisChollosAPI;
 import practicas.fpmislata.com.mischollosbd.pojo.Alojamiento;
 import practicas.fpmislata.com.mischollosbd.pojo.Chollo;
 import practicas.fpmislata.com.mischollosbd.pojo.Usuario;
+import practicas.fpmislata.com.mischollosbd.pojo.Valoracion;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,9 +110,22 @@ public class MainActivity extends AppCompatActivity {
         txtdatos.append("Se han obtenido " + listaAlojamientos.size() + " alojamientos.\n");
         txtdatos.append("----------------------------------------------------------------------------------------------------\n");
 
-
         for(int i=0;i<listaAlojamientos.size();i++){
             txtdatos.append("\n" + listaAlojamientos.get(i).getTituloPrincipal() + "\n");
         }
+
+        txtdatos.append("\n");
+
+        txtdatos.append("Obtenemos las valoraciones del usuario 1 y del alojamiento 1.\n");
+        txtdatos.append("----------------------------------------------------------------------------------------------------\n");
+        ArrayList<Valoracion> listaValoraciones = api.getValoraciones(listaAlojamientos.get(0));
+        txtdatos.append("Se han obtenido " + listaValoraciones.size() + " valoraciones.\n");
+        txtdatos.append("----------------------------------------------------------------------------------------------------\n");
+        for(int i=0;i<listaValoraciones.size();i++){
+            txtdatos.append("\n" + listaValoraciones.get(i) + "\n");
+        }
+
+
+
     }
 }

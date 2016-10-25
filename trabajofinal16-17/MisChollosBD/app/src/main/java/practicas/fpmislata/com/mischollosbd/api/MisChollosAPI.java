@@ -10,6 +10,7 @@ import practicas.fpmislata.com.mischollosbd.bd.MiBD;
 import practicas.fpmislata.com.mischollosbd.pojo.Alojamiento;
 import practicas.fpmislata.com.mischollosbd.pojo.Chollo;
 import practicas.fpmislata.com.mischollosbd.pojo.Usuario;
+import practicas.fpmislata.com.mischollosbd.pojo.Valoracion;
 
 /**
  * Created by LOREN on 05/10/2016.
@@ -30,7 +31,7 @@ public class MisChollosAPI {
     // Operacion Login: Verifica que el Usuario existe y que su contraseña es correcta. Recibira un Usuario
     // que solo contendrá el nif y la password.
     public Usuario login(Usuario c){
-        Usuario aux = (Usuario) MiBD.getInstanceBD().getUsuarioDAO().search(c);
+        Usuario aux = (Usuario) MiBD.getInstanceBD().getUsuarioDAO().searchByPassword(c);
         if(aux==null){
             return null;
         }else if (aux.getClaveSeguridad().trim().equals(c.getClaveSeguridad().trim())){
@@ -60,6 +61,25 @@ public class MisChollosAPI {
     // Operacion getListAlojamientosByChollo: Obtiene una lista de alojamientos a partir de un chollo que se le pasa
     public ArrayList<Alojamiento> getListAlojamientosByChollo(Chollo chollo){
         return MiBD.getInstanceBD().getAlojamientoDAO().getAlojamientosByChollo(chollo);
+    }
+
+    // Operacion makeValoracion: metodo que se encarga de insertar una valoracion de un usuario y
+    // de un alojamiento en la base de datos, así como de actualizar los totales de las valoraciones
+    // del alojamiento
+    public void makeValoracion(Valoracion valoracion) throws Exception{
+        // Hacer valoracion
+    }
+
+    // Operacion getValoraciones: Obtiene una lista de las valoraciones de un alojamiento.
+    public ArrayList<Valoracion> getValoraciones(Alojamiento alojamiento){
+        return MiBD.getInstanceBD().getValoracionDAO().getValoracionesByAlojamiento(alojamiento);
+    }
+
+    // Operacion calcularValoracionesAlojamiento: método que se encarga de actualizar las valoraciones
+    // del alojamiento a partir de la lista de valoraciones existentes del alojamiento. Las valoraciones
+    // son calculadas en forma de media. Solo puede ser invocado desde dentro de makeValoracion(Valoracion valoracion)
+    private void calcularValoracionesAlojamiento(Alojamiento alojamiento) throws Exception{
+
     }
 
 

@@ -8,6 +8,7 @@ import android.util.Log;
 import practicas.fpmislata.com.mischollosbd.dao.AlojamientoDAO;
 import practicas.fpmislata.com.mischollosbd.dao.CholloDAO;
 import practicas.fpmislata.com.mischollosbd.dao.UsuarioDAO;
+import practicas.fpmislata.com.mischollosbd.dao.ValoracionDAO;
 
 
 /**
@@ -19,7 +20,7 @@ public class MiBD extends SQLiteOpenHelper {
     //nombre de la base de datos
     private static final String database = "MisChollosBD";
     //versión de la base de datos
-    private static final int version = 11;
+    private static final int version = 16;
     //Instrucción SQL para crear la tabla de Usuarios
     private String sqlCreacionUsuarios = "CREATE TABLE " + UsuarioDAO.C_TABLA + " ( " +
             UsuarioDAO.C_COLUMNA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -66,11 +67,33 @@ public class MiBD extends SQLiteOpenHelper {
             AlojamientoDAO.C_COLUMNA_CALIDADPRECIO + " FLOAT " +
             " );";
 
+    //Instruccion SQL para crear la tabla de Valoraciones
+    private String sqlCreacionValoraciones = "CREATE TABLE " + ValoracionDAO.C_TABLA + " ( " +
+            ValoracionDAO.C_COLUMNA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            ValoracionDAO.C_COLUMNA_IDUSUARIO + " INTEGER, " +
+            ValoracionDAO.C_COLUMNA_IDALOJAMIENTO + " INTEGER, " +
+            ValoracionDAO.C_COLUMNA_FECHA + " INTEGER, " +
+            ValoracionDAO.C_COLUMNA_NOTA + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_ESTRELLAS + " INTEGER, " +
+            ValoracionDAO.C_COLUMNA_HABITACIONES + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_SERVICIOS + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_LIMPIEZA + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_COMIDA + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_PERSONAL +  " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_CALIDADPRECIO + " FLOAT, " +
+            ValoracionDAO.C_COLUMNA_LOMEJOR + " STRING, " +
+            ValoracionDAO.C_COLUMNA_LOPEOR + " STRING " +
+            " );";
+
+
+
+
     private static MiBD instance = null;
 
     private static AlojamientoDAO alojamientoDAO;
     private static CholloDAO cholloDAO;
     private static UsuarioDAO usuarioDAO;
+    private static ValoracionDAO valoracionDAO;
     private static Context contextoAplicacion;
 
     public static Context getContextoAplicacion() {
@@ -93,6 +116,8 @@ public class MiBD extends SQLiteOpenHelper {
         return usuarioDAO;
     }
 
+    public static ValoracionDAO getValoracionDAO() { return valoracionDAO; }
+
     public static MiBD getInstanceBD() {
         if(instance == null) {
             instance = new MiBD(contextoAplicacion);
@@ -100,6 +125,7 @@ public class MiBD extends SQLiteOpenHelper {
             cholloDAO = new CholloDAO();
             alojamientoDAO = new AlojamientoDAO();
             usuarioDAO = new UsuarioDAO();
+            valoracionDAO = new ValoracionDAO();
         }
         return instance;
     }
@@ -127,7 +153,8 @@ public class MiBD extends SQLiteOpenHelper {
         Log.i(this.getClass().toString(), "Creando tabla Alojamientos");
         db.execSQL(sqlCreacionAlojamientos);
         Log.i(this.getClass().toString(), "Tabla Alojamientos creada");
-        //db.execSQL(sqlCreacionValoraciones);
+        db.execSQL(sqlCreacionValoraciones);
+        Log.i(this.getClass().toString(), "Tabla Valoraciones creada");
 
         // Insertar datos de usuarios
         Log.i(this.getClass().toString(), "Insertando datos iniciales Usuarios");
@@ -144,6 +171,11 @@ public class MiBD extends SQLiteOpenHelper {
         insercionDatosAlojamientos(db);
         Log.i(this.getClass().toString(), "Datos iniciales Alojamientos insertados");
 
+        // Insertar datos de valoraciones
+        Log.i(this.getClass().toString(), "Insertando datos iniciales valoraciones");
+        insercionDatosValoraciones(db);
+        Log.i(this.getClass().toString(), "Datos iniciales Valoraciones insertados");
+
         Log.i("SQLite", "Se crea la base de datos " + database + " version " + version);
     }
 
@@ -156,12 +188,12 @@ public class MiBD extends SQLiteOpenHelper {
             db.execSQL( "DROP TABLE IF EXISTS " + AlojamientoDAO.C_TABLA );
             db.execSQL( "DROP TABLE IF EXISTS " + CholloDAO.C_TABLA );
             db.execSQL( "DROP TABLE IF EXISTS " + UsuarioDAO.C_TABLA );
-            //db.execSQL( "DROP TABLE IF EXISTS " + ValoracionDAO.C_TABLA );
+            db.execSQL( "DROP TABLE IF EXISTS " + ValoracionDAO.C_TABLA );
             //y luego creamos la nueva tabla
             db.execSQL(sqlCreacionUsuarios);
             db.execSQL(sqlCreacionChollos);
             db.execSQL(sqlCreacionAlojamientos);
-           // db.execSQL(sqlCreacionValoraciones);
+            db.execSQL(sqlCreacionValoraciones);
 
             // Insertar datos de usuarios
             Log.i(this.getClass().toString(), "Insertando datos iniciales Usuarios");
@@ -177,6 +209,11 @@ public class MiBD extends SQLiteOpenHelper {
             Log.i(this.getClass().toString(), "Insertando datos iniciales Alojamientos");
             insercionDatosAlojamientos(db);
             Log.i(this.getClass().toString(), "Datos iniciales Alojamientos insertados");
+
+            // Insertar datos de valoraciones
+            Log.i(this.getClass().toString(), "Insertando datos iniciales valoraciones");
+            insercionDatosValoraciones(db);
+            Log.i(this.getClass().toString(), "Datos iniciales Valoraciones insertados");
 
             Log.i("SQLite", "Se crea la base de datos " + database + " version " + version);
 
@@ -809,6 +846,98 @@ public class MiBD extends SQLiteOpenHelper {
                 // Relacion  calidad/precio
                 "6.8" + ");";
         db.execSQL(sqlAux1);
+    }
 
+    // Insercion de datos de valoraciones
+    private void insercionDatosValoraciones(SQLiteDatabase db) {
+        // Datos valoracion 1
+        String cSql = "INSERT INTO " + ValoracionDAO.C_TABLA + "(" +
+                ValoracionDAO.C_COLUMNA_ID + "," +
+                ValoracionDAO.C_COLUMNA_IDUSUARIO + "," +
+                ValoracionDAO.C_COLUMNA_IDALOJAMIENTO + "," +
+                ValoracionDAO.C_COLUMNA_FECHA + "," +
+                ValoracionDAO.C_COLUMNA_NOTA + "," +
+                ValoracionDAO.C_COLUMNA_ESTRELLAS + "," +
+                ValoracionDAO.C_COLUMNA_HABITACIONES + "," +
+                ValoracionDAO.C_COLUMNA_SERVICIOS + "," +
+                ValoracionDAO.C_COLUMNA_LIMPIEZA + "," +
+                ValoracionDAO.C_COLUMNA_COMIDA + "," +
+                ValoracionDAO.C_COLUMNA_PERSONAL + "," +
+                ValoracionDAO.C_COLUMNA_CALIDADPRECIO + "," +
+                ValoracionDAO.C_COLUMNA_LOMEJOR + "," +
+                ValoracionDAO.C_COLUMNA_LOPEOR + ") VALUES (";
+        String sqlAux1 = cSql + "null," +
+                // Id Usuario
+                "1" + "," +
+                // Id Alojamiento
+                "1" + "," +
+                // Fecha
+                "1462406400000" + "," +
+                // Nota
+                "7.68" + "," +
+                // Estrellas
+                "4" + "," +
+                // Habitaciones
+                "8.75" + "," +
+                // Servicios
+                "8.43" + "," +
+                // Limpieza
+                "6.38" + "," +
+                // Comida
+                "8.42" + "," +
+                // Personal
+                "6.94" + "," +
+                // CalidadPrecio
+                "8.58" + "," +
+                // LoMejor
+                "'" + "Sin duda lo mejor son las habitaciones." + "'" + "," +
+                // LoPeor
+                "'" + "La limpieza tiene que mejorar." + "'" + ");";
+        db.execSQL(sqlAux1);
+
+        // Datos valoracion 2
+        cSql = "INSERT INTO " + ValoracionDAO.C_TABLA + "(" +
+                ValoracionDAO.C_COLUMNA_ID + "," +
+                ValoracionDAO.C_COLUMNA_IDUSUARIO + "," +
+                ValoracionDAO.C_COLUMNA_IDALOJAMIENTO + "," +
+                ValoracionDAO.C_COLUMNA_FECHA + "," +
+                ValoracionDAO.C_COLUMNA_NOTA + "," +
+                ValoracionDAO.C_COLUMNA_ESTRELLAS + "," +
+                ValoracionDAO.C_COLUMNA_HABITACIONES + "," +
+                ValoracionDAO.C_COLUMNA_SERVICIOS + "," +
+                ValoracionDAO.C_COLUMNA_LIMPIEZA + "," +
+                ValoracionDAO.C_COLUMNA_COMIDA + "," +
+                ValoracionDAO.C_COLUMNA_PERSONAL + "," +
+                ValoracionDAO.C_COLUMNA_CALIDADPRECIO + "," +
+                ValoracionDAO.C_COLUMNA_LOMEJOR + "," +
+                ValoracionDAO.C_COLUMNA_LOPEOR + ") VALUES (";
+        sqlAux1 = cSql + "null," +
+                // Id Usuario
+                "1" + "," +
+                // Id Alojamiento
+                "1" + "," +
+                // Fecha
+                "1515110400000" + "," +
+                // Nota
+                "6.49" + "," +
+                // Estrellas
+                "4" + "," +
+                // Habitaciones
+                "7.95" + "," +
+                // Servicios
+                "5.78" + "," +
+                // Limpieza
+                "7.34" + "," +
+                // Comida
+                "7.64" + "," +
+                // Personal
+                "8.54" + "," +
+                // CalidadPrecio
+                "7.43" + "," +
+                // LoMejor
+                "'" + "Sin duda lo mejor los servicios." + "'" + "," +
+                // LoPeor
+                "'" + "La piscina tiene que mejorar." + "'" + ");";
+        db.execSQL(sqlAux1);
     }
 }

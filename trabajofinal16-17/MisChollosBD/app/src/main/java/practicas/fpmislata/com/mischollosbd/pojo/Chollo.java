@@ -49,13 +49,13 @@ public class Chollo implements Serializable {
         this.orden = orden;
     }
 
-    public List<Alojamiento> getListaAlojamientos() {
+    /*public List<Alojamiento> getListaAlojamientos() {
         return listaAlojamientos;
     }
 
     public void setListaAlojamientos(List<Alojamiento> listaAlojamientos) {
         this.listaAlojamientos = listaAlojamientos;
-    }
+    }*/
 
     @Override
     public String toString() {

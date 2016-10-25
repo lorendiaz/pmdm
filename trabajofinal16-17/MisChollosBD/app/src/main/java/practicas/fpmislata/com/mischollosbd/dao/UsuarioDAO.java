@@ -132,4 +132,31 @@ public class UsuarioDAO implements PojoDAO {
         cursor.close();
         return listaUsuarios;
     }
+
+    public Object searchByPassword(Object obj) {
+        Usuario c = (Usuario) obj;
+        String condicion = "";
+        if((!TextUtils.isEmpty(c.getNif()))&&(!TextUtils.isEmpty(c.getClaveSeguridad()))){
+            condicion = "nif=" + "'" + String.valueOf(c.getNif()) + "' and claveSeguridad=" + "'" +
+                    String.valueOf(c.getClaveSeguridad()) + "'";
+        }else{
+            return null;
+        }
+
+        Cursor cursor = MiBD.getDB().query(UsuarioDAO.C_TABLA, columnas, condicion, null, null, null, null);
+        if (cursor.moveToFirst()) {
+            c.setId(cursor.getInt(0));
+            c.setNif(cursor.getString(1));
+            c.setNombre(cursor.getString(2));
+            c.setApellidos(cursor.getString(3));
+            c.setEdad(cursor.getInt(4));
+            c.setLocalidad(cursor.getString(5));
+            c.setClaveSeguridad(cursor.getString(6));
+            c.setEmail(cursor.getString(7));
+        }else{
+            c = null;
+        }
+        cursor.close();
+        return c;
+    }
 }

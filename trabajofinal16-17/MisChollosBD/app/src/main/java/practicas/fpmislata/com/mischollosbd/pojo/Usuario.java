@@ -100,6 +100,7 @@ public class Usuario implements Serializable{
         this.email = email;
     }
 
+    /*
     public List<Chollo> getListaChollos() {
         return listaChollos;
     }
@@ -108,6 +109,7 @@ public class Usuario implements Serializable{
         this.listaChollos = listaChollos;
     }
 
+*/
     @Override
     public String toString() {
         return "Usuario{" +

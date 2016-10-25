@@ -313,15 +313,15 @@ public class Alojamiento implements Serializable {
     public void setLocalidad(String localidad) {
         this.localidad = localidad;
     }
+    /*
+        public List<Valoracion> getListaValoraciones() {
+            return listaValoraciones;
+        }
 
-    public List<Valoracion> getListaValoraciones() {
-        return listaValoraciones;
-    }
-
-    public void setListaValoraciones(List<Valoracion> listaValoraciones) {
-        this.listaValoraciones = listaValoraciones;
-    }
-
+        public void setListaValoraciones(List<Valoracion> listaValoraciones) {
+            this.listaValoraciones = listaValoraciones;
+        }
+    */
     public String getTituloPrincipal() {
         return tituloPrincipal;
     }
