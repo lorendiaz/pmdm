@@ -43,7 +43,7 @@ public class ValoracionDAO implements PojoDAO {
      */
     private String[] columnas = new String[]{C_COLUMNA_ID, C_COLUMNA_IDUSUARIO, C_COLUMNA_IDALOJAMIENTO,
     C_COLUMNA_FECHA, C_COLUMNA_NOTA, C_COLUMNA_ESTRELLAS, C_COLUMNA_HABITACIONES, C_COLUMNA_SERVICIOS,
-    C_COLUMNA_LIMPIEZA, C_COLUMNA_LIMPIEZA, C_COLUMNA_COMIDA, C_COLUMNA_PERSONAL, C_COLUMNA_CALIDADPRECIO,
+    C_COLUMNA_LIMPIEZA, C_COLUMNA_COMIDA, C_COLUMNA_PERSONAL, C_COLUMNA_CALIDADPRECIO,
     C_COLUMNA_LOMEJOR,C_COLUMNA_LOPEOR};
 
     @Override
@@ -131,13 +131,14 @@ public class ValoracionDAO implements PojoDAO {
                 c.setFecha(cursor.getLong(3));
                 c.setNota(cursor.getFloat(4));
                 c.setEstrellas(cursor.getInt(5));
-                c.setServicios(cursor.getFloat(6));
-                c.setLimpieza(cursor.getFloat(7));
-                c.setComida(cursor.getFloat(8));
-                c.setPersonal(cursor.getFloat(9));
-                c.setCalidadPrecio(cursor.getFloat(10));
-                c.setLoMejor(cursor.getString(11));
-                c.setLoPeor(cursor.getString(12));
+                c.setHabitaciones(cursor.getFloat(6));
+                c.setServicios(cursor.getFloat(7));
+                c.setLimpieza(cursor.getFloat(8));
+                c.setComida(cursor.getFloat(9));
+                c.setPersonal(cursor.getFloat(10));
+                c.setCalidadPrecio(cursor.getFloat(11));
+                c.setLoMejor(cursor.getString(12));
+                c.setLoPeor(cursor.getString(13));
 
                 listaValoraciones.add(c);
             } while (cursor.moveToNext());
@@ -172,13 +173,14 @@ public class ValoracionDAO implements PojoDAO {
                 c.setFecha(cursor.getLong(3));
                 c.setNota(cursor.getFloat(4));
                 c.setEstrellas(cursor.getInt(5));
-                c.setServicios(cursor.getFloat(6));
-                c.setLimpieza(cursor.getFloat(7));
-                c.setComida(cursor.getFloat(8));
-                c.setPersonal(cursor.getFloat(9));
-                c.setCalidadPrecio(cursor.getFloat(10));
-                c.setLoMejor(cursor.getString(11));
-                c.setLoPeor(cursor.getString(12));
+                c.setHabitaciones(cursor.getFloat(6));
+                c.setServicios(cursor.getFloat(7));
+                c.setLimpieza(cursor.getFloat(8));
+                c.setComida(cursor.getFloat(9));
+                c.setPersonal(cursor.getFloat(10));
+                c.setCalidadPrecio(cursor.getFloat(11));
+                c.setLoMejor(cursor.getString(12));
+                c.setLoPeor(cursor.getString(13));
 
                 listaValoraciones.add(c);
             } while (cursor.moveToNext());
