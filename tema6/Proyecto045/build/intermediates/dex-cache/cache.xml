@@ -2,32 +2,157 @@
 <items version="2" >
 
     <item
-        jar="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/pre-dexed/debug/classes-f25bad97ded36d9f2eafacc64943b746246ddcd7.jar" />
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_d927f828609ad2e35e4036bc5956b2980ee24210\classes.dex" />
     </item>
     <item
-        jar="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-e03f88c276ad022a272abed026997c5f14278c22.jar" />
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_1e83c7ca4804c7c38a6607a34003ae1a9e57ecce\classes.dex" />
     </item>
     <item
-        jar="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/pre-dexed/debug/classes-8e2e789cd2cafef59207e5ffea7f86ded06ea257.jar" />
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_b90ee2af8fc5227b220c8913604b1925ee3d8e7f\classes.dex" />
     </item>
     <item
-        jar="/Users/loren/Documents/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/loren/subidapracticas/tema6/Proyecto045/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-eb8f13c99b190dbf26a6277346ffafa183735520.jar" />
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4af7f44d2de6e0b3fc5339a5a03f08323c34b01e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_834c322778c5a761616c1f9e30630b20ffbe593f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_bb6c67172b3750acabc994b659bf3b43a2a33c32\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_7119c41d57b1b1a8f6e133b7376d7dbdf5e60c69\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_80795dcbac923d6e040e9078ed1b8999914f3699\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_72457ac04e20a9e667e72ce1a9f21b9faf6ce3ad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1050aed5ccd1489da61c34c5c3c16e9d68d96d68">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d51f9750c64d40b708d973df2515df999db79a7c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_462ad3d625cd89a154226eb73ea896327ca8989f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_36838c1deaae2a6b708b503debc6af6b8a45a735\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_2c98df0f20196680dbc8d836884d4513ac54d223\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ea4538bea96c3412e71f31d3d325c6ad0557c7e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_40a13f70700549eda94e2f55a054d10332f07303\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e5af0a789c4ec029fec0ca2095c537ce8a55898e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3adf72571043d0a11118bb5e41a603fb58ce9125">
+        <dex dex="C:\Users\LOREN\Documents\GitHub\pmdm\tema6\Proyecto045\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_58395f62b29e868c3554fea7334a60c8d7bd37af\classes.dex" />
     </item>
 
 </items>
